@@ -10,6 +10,11 @@
   </head>
 
   <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container">
+        <%= link_to 'Cat Registry', cats_path, {class: "navbar-brand"} %>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>
