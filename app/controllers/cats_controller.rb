@@ -1,10 +1,13 @@
 class CatsController < ApplicationController
+  MAX_RECORDS_PER_PAGE = 10
   before_action :set_cat, only: [:show, :edit, :update, :destroy]
 
   # GET /cats
   # GET /cats.json
   def index
-    @cats = Cat.all
+    @page = (params[:page] || 1).to_i
+    @cats = Cat.get_offset_selection(MAX_RECORDS_PER_PAGE, @page - 1)
+    @last_page = @cats.include?(Cat.last)
   end
 
   # GET /cats/1

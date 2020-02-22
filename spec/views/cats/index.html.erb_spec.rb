@@ -14,6 +14,7 @@ RSpec.describe "cats/index", type: :view do
         :registry => "Registry"
       )
     ])
+    assign(:page, 0)
   end
 
   it "renders a list of cats" do

@@ -29,3 +29,6 @@
 <br>
 
 <%= link_to 'New Cat', new_cat_path %>
+
+<%= link_to_if @page > 1, "Previous", cats_path(page: @page - 1) %>
+<%= link_to_if !@last_page, "Next", cats_path(page: @page + 1) %>
