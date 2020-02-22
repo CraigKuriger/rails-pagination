@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+- Rails prototype for pagination without using a gem.
+- This application has one single model for cats and is setup to display a maximum 10 results per page.
 
-Things you may want to cover:
+- Ruby version: 2.6.5
+- Rails version: 5.2.4.1
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Run `bundle` to install dependencies
+- Run `rails db:migrate` and `rails db:seed` to setup database and seed
+- Run `rspec` to run the test suite
+- Run `rail s` to start the server and open `localhost:3000`
